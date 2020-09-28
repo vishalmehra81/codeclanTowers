@@ -1,25 +1,29 @@
+import java.util.ArrayList;
+
 public abstract class Room {
-    private Guest guest;
-    private RoomType roomType;
+    private int capacity;
+    private ArrayList<Guest> guests;
 
-    public Room(Guest guest, RoomType roomType) {
-        this.guest = guest;
-        this.roomType = roomType;
+    public Room(int capacity) {
+        this.capacity = capacity;
+        this.guests = new ArrayList<Guest>();
     }
 
-    public Guest getGuest() {
-        return this.guest;
+    public ArrayList<Guest> getGuests() {
+        return this.guests;
     }
 
-    public void setGuest(Guest guest) {
-        this.guest = guest;
+    public int getCapacity() {
+        return this.capacity;
     }
 
-    public RoomType getRoomType() {
-        return this.roomType;
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
-    public void setRoomType(RoomType roomType) {
-        this.roomType = roomType;
+    public void setGuests(ArrayList<Guest> guests) {
+        this.guests = guests;
     }
 }
+
+
